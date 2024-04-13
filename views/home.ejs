@@ -127,7 +127,7 @@
             <li><% if(typeof username !== 'undefined' && username){ %>
                 <h3>Hi <%= username %></h3>
                 <% } else{ %>
-                    <a href="http://localhost:2000/login">Login</a>
+                    <a href="/login">Login</a>
                 <%}%>
             </li>
         </ul>
@@ -136,9 +136,9 @@
     
     <div class="container">
         <form <% if(typeof username !== 'undefined' && username){ %>
-            action="http://localhost:2000/test"
+            action="/test"
         <% }else{ %>
-            action="http://localhost:2000/login"
+            action="/login"
         <% } %>>
         <% if(typeof username !== 'undefined' && username){ %>
             <button class="btn-red">start quiz</button>
