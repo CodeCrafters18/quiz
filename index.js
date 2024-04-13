@@ -17,7 +17,7 @@ const mongoose = require('mongoose');
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/gamedev');
+  await mongoose.connect('mongodb+srv://codecraftersalliance:ZcoAFIg6f4kgu2hE@cluster0.pz4irii.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
 }  
 
 const questions=require("./models/question.js");
@@ -51,16 +51,16 @@ app.get("/signup",(req,res)=>{
   res.render("signup.ejs");
 })
 
-const checklogin = (req, res, next) => {
-  if (req.headers.referer && req.headers.referer.includes('http://localhost:2000/')) {
-    next();
-  } else {
-    res.send('you are not authorized');
-  }
-};
+// const checklogin = (req, res, next) => {
+//   if (req.headers.referer && req.headers.referer.includes('http://localhost:2000/')) {
+//     next();
+//   } else {
+//     res.send('you are not authorized');
+//   }
+// };
 
 
-app.get("/test",checklogin,async (req, res) => {
+app.get("/test",async (req, res) => {
   try {
     let data = await questions.find();
     module.exports = data;
