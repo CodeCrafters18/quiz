@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: cursive;
+            box-sizing: border-box;  
+        }
+
+        body {
+            background-color: #f3f4f6;
+            background-image: url("https://wpvip.edutopia.org/wp-content/uploads/2022/10/39216203_l-rev_1.jpg?w=2880&quality=85");
+            background-size: cover;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 50px auto 0; /* Adjusted margin-top */
+            padding: 20px;
+            background-color: rgba(0, 123, 255, 0.65);
+            color: #fff;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        form input[type="text"],
+        form button[type="submit"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        form button[type="submit"] {
+            background-color: #252525;
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button[type="submit"]:hover {
+            background-color: #c2185b;
+        }
+    </style>
+</head>
+<body>
+    <form action="/test" method="POST">
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question"><br><br>
+        
+        <label for="optionA">Option A:</label>
+        <input type="text" id="optionA" name="A"><br><br>
+
+        <label for="optionB">Option B:</label>
+        <input type="text" id="optionB" name="B"><br><br>
+
+        <label for="optionC">Option C:</label>
+        <input type="text" id="optionC" name="C"><br><br>
+
+        <label for="optionD">Option D:</label>
+        <input type="text" id="optionD" name="D"><br><br>
+
+        <label for="answer">Answer:</label>
+        <input type="text" id="answer" name="answer"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

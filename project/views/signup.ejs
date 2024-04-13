@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+    <div id="backgound-image"></div>
+    <link rel="stylesheet" href="style2.css">
+</head>
+    <style>
+        body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: white;
+        background-color: #f0f0f0;
+        font-family: cursive;
+        background-image: url("https://www.shutterstock.com/shutterstock/photos/1538827094/display_1500/stock-vector-vector-seamless-pattern-of-cartoon-question-marks-yellow-quiz-background-1538827094.jpg");
+        }
+
+        nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background-color: #333;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px 0;
+        }
+
+        nav img {
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-container {
+        border-radius: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        background-color: #212121b9;
+        padding: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-container label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        text-transform: uppercase;
+        }
+
+        .login-container input[type="email"],
+        .login-container input[type="password"],
+        .login-container input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        }
+
+        .login-container input[type="email"]:focus,
+        .login-container input[type="password"]:focus,
+        .login-container input[type="text"]:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .login-container .forgot {
+        margin-top: -10px;
+        font-size: 12px;
+        }
+
+        .login-container .forgot a {
+        color: #007bff;
+        text-decoration: none;
+        }
+
+        .login-container button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #ffd000;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        }
+
+        .login-container button[type="submit"]:hover {
+        background-color: #ffd000;
+        }
+
+        .signup-link {
+        margin-top: 10px;
+        font-size: 14px;
+        }
+
+        .signup-link a {
+        color: #cbd6e0;
+        text-decoration: none;
+        }
+
+        .main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+        .logger{
+            border: 1px black solid;
+            font-size: 15px;
+            color: #000000;
+            background-color: #ffd000  ;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 3px 10px;
+        }
+    </style>
+<body>
+    <nav>
+        <span><img src="gamedev+.png" width="100px" alt="">GameDev+</span>
+        <span><a href="/home" style="margin-right: 40px;color: white;text-decoration: none;">home</a></span>
+    </nav>
+    <form action="/home" method="post" class="form1">
+        <div class="login-container">
+            <select name="logger" class="logger">
+                <option value="student">Student</option>
+                <option value="teacher">Teacher</option>
+            </select>
+            
+            <label for="username"></label>
+            <input type="text" id="username" name="username" placeholder="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="abc@gmail.com" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="****" required>
+
+            <!-- <p class="forgot"><a href="">Forgot Password</a></p> -->
+            <button type="submit" id="login" name="login" value="login" style="font-weight: bold;color: black;">Signup</button>
+
+            
+        </div>
+    </form>
+    <script>
+        function submitForm() {
+            document.querySelector(".form2").submit();
+        }
+        let form1=document.querySelector(".form1");
+        form1.addEventListener("submit",()=>{
+            submitForm();
+        })
+    </script>
+</body>
+</html>

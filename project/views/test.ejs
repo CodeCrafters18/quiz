@@ -1,0 +1,139 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Demo Test</title> 
+    <style>
+        body {
+            font-family: cursive;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            background-image: url("https://wpvip.edutopia.org/wp-content/uploads/2022/10/39216203_l-rev_1.jpg?w=2880&quality=85");
+            background-size: cover;
+        }
+
+        .form {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(36, 36, 36, 0.719);
+            color: #fff;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            font-size: large;
+        }
+
+        h1 {
+            text-align: center;
+            color: black;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            text-align: left; /* Align labels to the left */
+        }
+
+        input[type="radio"]{
+            display: none;
+        }
+
+        label:before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            border: 4px solid #ccc;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        input[type="radio"]:checked + label:before {
+            background-color: #c2185b;
+            border:4px solid yellow;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            border: none;
+            background-color: #252525;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c2185b;
+        }
+
+        .quenavigator {
+            position: absolute;
+            left: 80%;
+            top: 15%;
+            border:#333 2px solid;
+            padding:10px ;
+            border-radius: 10px;
+            margin-right: 55px;
+            background-color:rgba(36, 36, 36, 0.719);
+        }
+
+        .btn:active {
+            border: #333 .5px solid;
+            opacity: 0.5;
+        }
+        a{
+            margin: 10px;
+            background-color: black;
+            color: white;
+            width: 60px;
+            position: absolute;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Use EJS syntax to pass the array to JavaScript
+        let data = <%- JSON.stringify(data) %>;
+    </script>
+    <a href="/home" class="homelink">home</a>
+    <h1> Demo test</h1>
+    <div class="form">
+        <form method="post" action="/test/result">
+            <h3>Question Title </h3>
+            <input type="hidden" class="hidden" name="score">
+            <input type="radio" name="opt" id="opt1">
+            <label for="opt1">Option 1</label><br>
+            <input type="radio" name="opt" id="opt2">
+            <label for="opt2">Option 2</label><br>
+            <input type="radio" name="opt" id="opt3">
+            <label for="opt3">Option 3</label><br>
+            <input type="radio" name="opt" id="opt4">
+            <label for="opt4">Option 4</label><br><br/>
+            <button type="submit" class="submitbtn">Submit</button>
+            <button class="previous">Previous</button>
+            <button class="next">Next</button>
+        </form>
+    </div>
+    <div class="quenavigator">
+    </div>
+    
+</body>
+<script src="/test.js"></script>
+</html>
